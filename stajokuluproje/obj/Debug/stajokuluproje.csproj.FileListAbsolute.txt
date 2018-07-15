@@ -11,3 +11,4 @@ c:\users\omura\source\repos\stajokuluproje\stajokuluproje\obj\Debug\stajokulupro
 c:\users\omura\source\repos\stajokuluproje\stajokuluproje\obj\Debug\stajokuluproje.csproj.CoreCompileInputs.cache
 c:\users\omura\source\repos\stajokuluproje\stajokuluproje\obj\Debug\stajokuluproje.exe
 c:\users\omura\source\repos\stajokuluproje\stajokuluproje\obj\Debug\stajokuluproje.pdb
+C:\Users\Omura\source\repos\stajokuluproje\stajokuluproje\obj\Debug\stajokuluproje.csprojAssemblyReference.cache

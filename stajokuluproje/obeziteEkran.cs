@@ -12,48 +12,68 @@ namespace stajokuluproje
 {
     public partial class OBEZİTE : Form
     {
-        private int kiloDeger;
-        private int boyDeger;
+        private double endeks;
+        private double kiloDeger;
+        private double boyDeger;
         private Boolean bayan ;
         public HASTALIK_SECİMİ parent;
-        // parent.Show();
-        // this.Hide();
+        private Boolean notNull = false;
+      
         public OBEZİTE()
         {
             InitializeComponent();
         }
 
-        private void cinsiyetSecimi(object sender, EventArgs e)
+
+        private void hesapla(object sender, EventArgs e)        //Hesapla butonuna basilinca yapilacak islem
         {
-            if (radioButton1.Checked)
+
+
+            if (!string.IsNullOrEmpty(boytext.Text) || !string.IsNullOrEmpty(boytext.Text))     //Alanlaril dolu olup olmadigini sorguluyoruz
             {
-                bayan = true;
+                boyDeger = int.Parse(boytext.Text);
+                kiloDeger = int.Parse(kilotext.Text);           //Eger alanlar bos değilse girilen degerleri değiskenlere atıyoruz
+
+                notNull = true;
+            }
+            else
+            {
+                MessageBox.Show("Lütfen bütün alanlari doldurunuz! ");              //Eger alanlar bos ise hata yazdirip isleme devam etmiyoruz
+                notNull = false;
 
             }
-            else if (radioButton2.Checked)
-            {
-                bayan = false;
+
+            if (notNull == true) {                  //Eger alanlar doluysa islemleri yapıyoruz  (notNull kendi olusturdugum bir degisken sadece bos dolu sorgusu icin)
+                boyDeger = boyDeger / 100;
+                endeks = kiloDeger / Math.Pow(boyDeger, 2);     //Cinsiyeti kullanmamamın sebebi ideal kilo hesabı eklemedigimiz için fakat veritabanına atmak için kullanılabilir
+                ekranaYaz(endeks);                      //İslemler yapıldıktan sonra ekrana yazdirmasi için ayrı fonksiyona gönderiyorum
+
+                boyDeger = 0;
+                kiloDeger = 0;
             }
 
         }
 
-        private void textGirdi1(object sender, EventArgs e)
+        private void ekranaYaz(double sonuc)                //Ekrana yazdirma fonksiyonu
         {
-            boyDeger = int.Parse(boytext.Text);
+            
+            if (sonuc < 18.5)
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Düşük kilolusunuz ! ");
+            else if (sonuc < 30)
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Kilonuz normal ! ");
+            else
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Fazla kilolusunuz ! ");
+
+            kilotext.ResetText();               //textboxların içerigini sıfırlıyor yani boşaltıyor
+            boytext.ResetText();
         }
-        private void textGirdi2(object sender, EventArgs e)
+
+        private void geriDon(object sender, EventArgs e)                    //Geri dön fonksiyonu
         {
-            kiloDeger = int.Parse(kilotext.Text);
-
+            parent.Show();
+            this.Hide();
         }
 
-        private void hesapla(object sender, EventArgs e)
-        {
 
-            MessageBox.Show(kiloDeger + " kilosunda ve bu boyda " + boyDeger);
-
-
-
-        }
     }
-        }
+    }

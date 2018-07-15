@@ -39,6 +39,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.hesapla_seker_btn = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -158,12 +159,24 @@
             this.hesapla_seker_btn.UseVisualStyleBackColor = false;
             this.hesapla_seker_btn.Click += new System.EventHandler(this.hesapla);
             // 
+            // btnGeri
+            // 
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnGeri.Location = new System.Drawing.Point(1090, 590);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(97, 45);
+            this.btnGeri.TabIndex = 11;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.geriDon);
+            // 
             // SEKER_HASTALIGI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.hesapla_seker_btn);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
@@ -198,5 +211,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button hesapla_seker_btn;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

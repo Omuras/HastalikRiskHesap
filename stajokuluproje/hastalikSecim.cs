@@ -24,7 +24,7 @@ namespace stajokuluproje
 
         private void kalpGiris(object sender, EventArgs e)
         {
-
+            kalpGec.parent = this;
             kalpGec.Show();
             this.Hide();
 
@@ -40,6 +40,7 @@ namespace stajokuluproje
 
         private void obeziteGiris(object sender, EventArgs e)
         {
+            obeziteGec.parent = this;
             obeziteGec.Show();
             this.Hide();
         }

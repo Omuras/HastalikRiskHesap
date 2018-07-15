@@ -36,6 +36,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.obezite_buton = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,9 +45,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(353, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 20);
+            this.label1.Size = new System.Drawing.Size(214, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Boy Bilginizi Giriniz:";
+            this.label1.Text = "Boy Bilginizi Giriniz (Cm) :";
             // 
             // label2
             // 
@@ -75,7 +76,8 @@
             this.boytext.Name = "boytext";
             this.boytext.Size = new System.Drawing.Size(164, 20);
             this.boytext.TabIndex = 3;
-            this.boytext.TextChanged += new System.EventHandler(this.textGirdi1);
+          //  this.boytext.TextChanged += new System.EventHandler(this.textGirdi1);
+            this.boytext.MaxLength = 3;
             // 
             // kilotext
             // 
@@ -84,7 +86,7 @@
             this.kilotext.Name = "kilotext";
             this.kilotext.Size = new System.Drawing.Size(164, 20);
             this.kilotext.TabIndex = 4;
-            this.kilotext.TextChanged += new System.EventHandler(this.textGirdi2);
+          //  this.kilotext.TextChanged += new System.EventHandler(this.textGirdi2);
             // 
             // radioButton1
             // 
@@ -97,7 +99,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "KADIN";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.cinsiyetSecimi);
             // 
             // radioButton2
             // 
@@ -124,12 +125,25 @@
             this.obezite_buton.UseVisualStyleBackColor = false;
             this.obezite_buton.Click += new System.EventHandler(this.hesapla);
             // 
+            // btnGeri
+            // 
+            this.btnGeri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeri.Location = new System.Drawing.Point(979, 548);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(113, 45);
+            this.btnGeri.TabIndex = 8;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.geriDon);
+            // 
             // OBEZİTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.obezite_buton);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -155,5 +169,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button obezite_buton;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

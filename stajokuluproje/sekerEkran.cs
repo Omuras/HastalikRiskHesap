@@ -36,8 +36,13 @@ namespace stajokuluproje
 
         private void hesapla(object sender, EventArgs e)
         {
-           // parent.Show();
-           // this.Hide();
+            
+        }
+        private void geriDon(object sender, EventArgs e)
+        {
+            parent.Show();
+            this.Hide();
         }
     }
 }
+

@@ -13,8 +13,7 @@ namespace stajokuluproje
     public partial class KALP_HASTALIĞI : Form
     {
         public HASTALIK_SECİMİ parent;
-        // parent.Show();
-        // this.Hide();
+
         public KALP_HASTALIĞI()
         {
             InitializeComponent();
@@ -24,20 +23,20 @@ namespace stajokuluproje
         {
 
         }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void hesaplaFunc(object sender, EventArgs e)                //Gerekli ayarlar yapıldı sorgu yazılması lazım
         {
+            if (btnErkek.Checked)
+            {
+                System.Windows.Forms.MessageBox.Show("It's a boy");
+            }
+
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void geriDon(object sender, EventArgs e)    //Geri dön fonksiyonu
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            parent.Show();
+            this.Hide();
         }
     }
 }
