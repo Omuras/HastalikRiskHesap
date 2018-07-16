@@ -73,11 +73,10 @@
             // 
             this.boytext.BackColor = System.Drawing.Color.OldLace;
             this.boytext.Location = new System.Drawing.Point(618, 173);
+            this.boytext.MaxLength = 3;
             this.boytext.Name = "boytext";
             this.boytext.Size = new System.Drawing.Size(164, 20);
             this.boytext.TabIndex = 3;
-          //  this.boytext.TextChanged += new System.EventHandler(this.textGirdi1);
-            this.boytext.MaxLength = 3;
             // 
             // kilotext
             // 
@@ -86,7 +85,6 @@
             this.kilotext.Name = "kilotext";
             this.kilotext.Size = new System.Drawing.Size(164, 20);
             this.kilotext.TabIndex = 4;
-          //  this.kilotext.TextChanged += new System.EventHandler(this.textGirdi2);
             // 
             // radioButton1
             // 

@@ -40,6 +40,10 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.hesapla_seker_btn = new System.Windows.Forms.Button();
             this.btnGeri = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,16 +56,14 @@
             this.label1.Size = new System.Drawing.Size(285, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Açlık Kan Şekeri Değerinizi Giriniz:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // aclık_skr
             // 
             this.aclık_skr.BackColor = System.Drawing.Color.OldLace;
-            this.aclık_skr.Location = new System.Drawing.Point(725, 132);
+            this.aclık_skr.Location = new System.Drawing.Point(725, 129);
             this.aclık_skr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.aclık_skr.Multiline = true;
             this.aclık_skr.Name = "aclık_skr";
-            this.aclık_skr.Size = new System.Drawing.Size(164, 40);
+            this.aclık_skr.Size = new System.Drawing.Size(164, 26);
             this.aclık_skr.TabIndex = 1;
             // 
             // label2
@@ -80,9 +82,8 @@
             this.tok_skr.BackColor = System.Drawing.Color.OldLace;
             this.tok_skr.Location = new System.Drawing.Point(725, 233);
             this.tok_skr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tok_skr.Multiline = true;
             this.tok_skr.Name = "tok_skr";
-            this.tok_skr.Size = new System.Drawing.Size(164, 40);
+            this.tok_skr.Size = new System.Drawing.Size(164, 26);
             this.tok_skr.TabIndex = 3;
             // 
             // label3
@@ -98,7 +99,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(725, 363);
+            this.radioButton1.Location = new System.Drawing.Point(134, 25);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(73, 24);
             this.radioButton1.TabIndex = 5;
@@ -109,7 +110,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(899, 361);
+            this.radioButton2.Location = new System.Drawing.Point(308, 23);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(83, 24);
             this.radioButton2.TabIndex = 6;
@@ -129,7 +130,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(725, 461);
+            this.radioButton3.Location = new System.Drawing.Point(134, 25);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(73, 24);
             this.radioButton3.TabIndex = 8;
@@ -140,7 +141,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(899, 461);
+            this.radioButton4.Location = new System.Drawing.Point(308, 21);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(83, 24);
             this.radioButton4.TabIndex = 9;
@@ -170,6 +171,26 @@
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.geriDon);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(591, 336);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(620, 70);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Location = new System.Drawing.Point(591, 442);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(620, 70);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            // 
             // SEKER_HASTALIGI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -178,21 +199,22 @@
             this.ClientSize = new System.Drawing.Size(1426, 802);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.hesapla_seker_btn);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tok_skr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aclık_skr);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SEKER_HASTALIGI";
             this.Text = "Seker hastaligi";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +234,7 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button hesapla_seker_btn;
         private System.Windows.Forms.Button btnGeri;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
