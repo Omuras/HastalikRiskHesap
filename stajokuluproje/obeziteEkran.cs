@@ -38,8 +38,18 @@ namespace stajokuluproje
                 boyDeger = int.Parse(boytext.Text);
                 kiloDeger = int.Parse(kilotext.Text);           //Eger alanlar bos değilse girilen degerleri değiskenlere atıyoruz
 
+                if (boyDeger < 140)
+                {
+                    MessageBox.Show("Lütfen geçerli bir boy bilgisi giriniz");      // Boy degerinin geçerliliği kontrol ediliyor
+                    notNull = false;
+                    boytext.ResetText();
+                }
+                else
+                {
 
-                notNull = true;
+                    notNull = true;
+                }
+
             }
             else
             {
@@ -54,11 +64,11 @@ namespace stajokuluproje
 
                 if (cinsiyet)               //ideal kilo hesabı 
                 {
-                    idealKilo = 50 + 2.3 * ((boyDeger - 152.4) / 2.54);                                 //Erkekse                        //50 + (2,3 ) * ((Boyunuz - 152,4) / 2,54)
+                    idealKilo = 50 + 2.3 * ((boyDeger*100 - 152.4) / 2.54);                                 //Erkekse                        //50 + (2,3 ) * ((Boyunuz - 152,4) / 2,54)
                 }
                 else
                 {
-                    idealKilo = 45.5 + 2.3 * ((boyDeger - 152.4) / 2.54);           //kadınsa
+                    idealKilo = 45.5 + 2.3 * ((boyDeger*100 - 152.4) / 2.54);           //kadınsa
                 }
 
 
@@ -73,15 +83,17 @@ namespace stajokuluproje
 
         private void ekranaYaz(double sonuc,double idealKilo)                //Ekrana yazdirma fonksiyonu
         {
-
-            if (sonuc < 18.5)
-                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Düşük kilolusunuz! İdeal kilonuz = " + idealKilo);
+            int ik = (int) idealKilo;
+            if (sonuc < 18.5) {
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + " Belki Ölü olabilirsiniz! İdeal kilonuz = " + ik);
+               
+            }
             else if (sonuc < 25)
-                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Kilonuz normal! İdeal kilonuz = " + idealKilo);
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + " Sende fakirsin dimi la! İdeal kilonuz = " + ik);
             else if (sonuc < 30)
-                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Fazla kilolusunuz! İdeal kilonuz = " + idealKilo);
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + " Şişkoya bak! İdeal kilonuz = " + ik);
             else
-                MessageBox.Show("Kütle endeksiniz : " + sonuc + "   Obezite sınıfına giriyorsunuz! İdeal kilonuz = " + idealKilo);
+                MessageBox.Show("Kütle endeksiniz : " + sonuc + " Yeter artık yeter yeme ! İdeal kilonuz = " + ik);
             kilotext.ResetText();               //textboxların içerigini sıfırlıyor yani boşaltıyor
             boytext.ResetText();
         }

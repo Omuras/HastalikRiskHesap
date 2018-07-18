@@ -72,7 +72,7 @@
             // boytext
             // 
             this.boytext.BackColor = System.Drawing.Color.OldLace;
-            this.boytext.Location = new System.Drawing.Point(618, 173);
+            this.boytext.Location = new System.Drawing.Point(673, 173);
             this.boytext.MaxLength = 3;
             this.boytext.Name = "boytext";
             this.boytext.Size = new System.Drawing.Size(164, 20);
@@ -81,7 +81,7 @@
             // kilotext
             // 
             this.kilotext.BackColor = System.Drawing.Color.OldLace;
-            this.kilotext.Location = new System.Drawing.Point(618, 287);
+            this.kilotext.Location = new System.Drawing.Point(673, 285);
             this.kilotext.Name = "kilotext";
             this.kilotext.Size = new System.Drawing.Size(164, 20);
             this.kilotext.TabIndex = 4;
@@ -150,11 +150,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(500, 300);
             this.Name = "OBEZİTE";
             this.Text = "Obezite";
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            
         }
 
         #endregion

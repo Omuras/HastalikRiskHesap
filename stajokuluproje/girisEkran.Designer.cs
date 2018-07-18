@@ -34,33 +34,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numberText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // adtext
             // 
             this.adtext.BackColor = System.Drawing.Color.OldLace;
-            this.adtext.Location = new System.Drawing.Point(580, 334);
-            this.adtext.Multiline = false;
+            this.adtext.Location = new System.Drawing.Point(583, 242);
             this.adtext.Name = "adtext";
-            this.adtext.Size = new System.Drawing.Size(277, 40);
+            this.adtext.Size = new System.Drawing.Size(277, 20);
             this.adtext.TabIndex = 0;
-            this.adtext.TextChanged += new System.EventHandler(this.adChanged);
             // 
             // soyadtext
             // 
             this.soyadtext.BackColor = System.Drawing.Color.OldLace;
-            this.soyadtext.Location = new System.Drawing.Point(580, 418);
-            this.soyadtext.Multiline = false;
+            this.soyadtext.Location = new System.Drawing.Point(583, 328);
             this.soyadtext.Name = "soyadtext";
-            this.soyadtext.Size = new System.Drawing.Size(277, 40);
+            this.soyadtext.Size = new System.Drawing.Size(277, 20);
             this.soyadtext.TabIndex = 1;
-            this.soyadtext.TextChanged += new System.EventHandler(this.soyadChanged);
             // 
             // kullanıcıbutton
             // 
             this.kullanıcıbutton.BackColor = System.Drawing.Color.OldLace;
             this.kullanıcıbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kullanıcıbutton.Location = new System.Drawing.Point(749, 516);
+            this.kullanıcıbutton.Location = new System.Drawing.Point(693, 520);
             this.kullanıcıbutton.Name = "kullanıcıbutton";
             this.kullanıcıbutton.Size = new System.Drawing.Size(164, 45);
             this.kullanıcıbutton.TabIndex = 2;
@@ -75,43 +73,62 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 3;
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(413, 354);
+            this.label2.Location = new System.Drawing.Point(366, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(195, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "ADI :";
+            this.label2.Text = "ADI                              :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(413, 438);
+            this.label3.Location = new System.Drawing.Point(366, 326);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.Size = new System.Drawing.Size(197, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "SOYADI:";
+            this.label3.Text = "SOYADI                       :";
             // 
-            // Form1
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(366, 400);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "TELEFON NUMARASI : ";
+            // 
+            // numberText
+            // 
+            this.numberText.BackColor = System.Drawing.Color.OldLace;
+            this.numberText.Location = new System.Drawing.Point(583, 400);
+            this.numberText.Name = "numberText";
+            this.numberText.Size = new System.Drawing.Size(277, 20);
+            this.numberText.TabIndex = 7;
+            // 
+            // girisEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.Controls.Add(this.numberText);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kullanıcıbutton);
             this.Controls.Add(this.soyadtext);
             this.Controls.Add(this.adtext);
-            this.Name = "Form1";
+            this.Location = new System.Drawing.Point(500, 300);
+            this.Name = "girisEkran";
             this.Text = "GİRİS";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +142,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox numberText;
     }
 }
 

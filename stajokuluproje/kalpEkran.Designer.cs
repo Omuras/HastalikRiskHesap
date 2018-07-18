@@ -82,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 455);
+            this.label1.Location = new System.Drawing.Point(179, 461);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 20);
             this.label1.TabIndex = 0;
@@ -142,7 +142,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(179, 535);
+            this.label7.Location = new System.Drawing.Point(179, 537);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(306, 20);
             this.label7.TabIndex = 6;
@@ -162,7 +162,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(180, 57);
+            this.label9.Location = new System.Drawing.Point(180, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(166, 20);
             this.label9.TabIndex = 8;
@@ -173,19 +173,20 @@
             this.btnKadin.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.btnKadin.AutoSize = true;
             this.btnKadin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKadin.Location = new System.Drawing.Point(133, 19);
+            this.btnKadin.Location = new System.Drawing.Point(124, 19);
             this.btnKadin.Name = "btnKadin";
             this.btnKadin.Size = new System.Drawing.Size(81, 24);
             this.btnKadin.TabIndex = 9;
             this.btnKadin.TabStop = true;
             this.btnKadin.Text = "KADIN";
             this.btnKadin.UseVisualStyleBackColor = true;
+            this.btnKadin.CheckedChanged += new System.EventHandler(this.btnKadin_CheckedChanged);
             // 
             // btnErkek
             // 
             this.btnErkek.AutoSize = true;
             this.btnErkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnErkek.Location = new System.Drawing.Point(307, 19);
+            this.btnErkek.Location = new System.Drawing.Point(317, 19);
             this.btnErkek.Name = "btnErkek";
             this.btnErkek.Size = new System.Drawing.Size(86, 24);
             this.btnErkek.TabIndex = 10;
@@ -197,7 +198,7 @@
             // 
             this.btnKiloE.AutoSize = true;
             this.btnKiloE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKiloE.Location = new System.Drawing.Point(138, 18);
+            this.btnKiloE.Location = new System.Drawing.Point(127, 18);
             this.btnKiloE.Name = "btnKiloE";
             this.btnKiloE.Size = new System.Drawing.Size(73, 24);
             this.btnKiloE.TabIndex = 11;
@@ -209,7 +210,7 @@
             // 
             this.btnKiloH.AutoSize = true;
             this.btnKiloH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKiloH.Location = new System.Drawing.Point(312, 18);
+            this.btnKiloH.Location = new System.Drawing.Point(320, 19);
             this.btnKiloH.Name = "btnKiloH";
             this.btnKiloH.Size = new System.Drawing.Size(83, 24);
             this.btnKiloH.TabIndex = 12;
@@ -221,7 +222,7 @@
             // 
             this.btnSigaraE.AutoSize = true;
             this.btnSigaraE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSigaraE.Location = new System.Drawing.Point(135, 15);
+            this.btnSigaraE.Location = new System.Drawing.Point(122, 19);
             this.btnSigaraE.Name = "btnSigaraE";
             this.btnSigaraE.Size = new System.Drawing.Size(73, 24);
             this.btnSigaraE.TabIndex = 13;
@@ -233,7 +234,7 @@
             // 
             this.btnSigaraH.AutoSize = true;
             this.btnSigaraH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSigaraH.Location = new System.Drawing.Point(312, 15);
+            this.btnSigaraH.Location = new System.Drawing.Point(318, 19);
             this.btnSigaraH.Name = "btnSigaraH";
             this.btnSigaraH.Size = new System.Drawing.Size(83, 24);
             this.btnSigaraH.TabIndex = 14;
@@ -245,7 +246,7 @@
             // 
             this.btnKalpE.AutoSize = true;
             this.btnKalpE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKalpE.Location = new System.Drawing.Point(132, 19);
+            this.btnKalpE.Location = new System.Drawing.Point(124, 19);
             this.btnKalpE.Name = "btnKalpE";
             this.btnKalpE.Size = new System.Drawing.Size(73, 24);
             this.btnKalpE.TabIndex = 15;
@@ -257,7 +258,7 @@
             // 
             this.btnKalpH.AutoSize = true;
             this.btnKalpH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKalpH.Location = new System.Drawing.Point(309, 19);
+            this.btnKalpH.Location = new System.Drawing.Point(320, 19);
             this.btnKalpH.Name = "btnKalpH";
             this.btnKalpH.Size = new System.Drawing.Size(83, 24);
             this.btnKalpH.TabIndex = 16;
@@ -269,7 +270,7 @@
             // 
             this.btnTansiyonE.AutoSize = true;
             this.btnTansiyonE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTansiyonE.Location = new System.Drawing.Point(135, 19);
+            this.btnTansiyonE.Location = new System.Drawing.Point(122, 19);
             this.btnTansiyonE.Name = "btnTansiyonE";
             this.btnTansiyonE.Size = new System.Drawing.Size(73, 24);
             this.btnTansiyonE.TabIndex = 17;
@@ -281,7 +282,7 @@
             // 
             this.btnTansiyonH.AutoSize = true;
             this.btnTansiyonH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTansiyonH.Location = new System.Drawing.Point(312, 19);
+            this.btnTansiyonH.Location = new System.Drawing.Point(318, 19);
             this.btnTansiyonH.Name = "btnTansiyonH";
             this.btnTansiyonH.Size = new System.Drawing.Size(83, 24);
             this.btnTansiyonH.TabIndex = 18;
@@ -293,7 +294,7 @@
             // 
             this.btnStresE.AutoSize = true;
             this.btnStresE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStresE.Location = new System.Drawing.Point(89, 15);
+            this.btnStresE.Location = new System.Drawing.Point(122, 19);
             this.btnStresE.Name = "btnStresE";
             this.btnStresE.Size = new System.Drawing.Size(73, 24);
             this.btnStresE.TabIndex = 19;
@@ -305,7 +306,7 @@
             // 
             this.btnStresH.AutoSize = true;
             this.btnStresH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStresH.Location = new System.Drawing.Point(269, 17);
+            this.btnStresH.Location = new System.Drawing.Point(318, 19);
             this.btnStresH.Name = "btnStresH";
             this.btnStresH.Size = new System.Drawing.Size(83, 24);
             this.btnStresH.TabIndex = 20;
@@ -317,7 +318,7 @@
             // 
             this.btnSekerE.AutoSize = true;
             this.btnSekerE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSekerE.Location = new System.Drawing.Point(138, 19);
+            this.btnSekerE.Location = new System.Drawing.Point(122, 19);
             this.btnSekerE.Name = "btnSekerE";
             this.btnSekerE.Size = new System.Drawing.Size(73, 24);
             this.btnSekerE.TabIndex = 21;
@@ -329,7 +330,7 @@
             // 
             this.btnSekerH.AutoSize = true;
             this.btnSekerH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSekerH.Location = new System.Drawing.Point(312, 19);
+            this.btnSekerH.Location = new System.Drawing.Point(318, 19);
             this.btnSekerH.Name = "btnSekerH";
             this.btnSekerH.Size = new System.Drawing.Size(83, 24);
             this.btnSekerH.TabIndex = 22;
@@ -341,7 +342,7 @@
             // 
             this.btnYas0.AutoSize = true;
             this.btnYas0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYas0.Location = new System.Drawing.Point(135, 19);
+            this.btnYas0.Location = new System.Drawing.Point(127, 19);
             this.btnYas0.Name = "btnYas0";
             this.btnYas0.Size = new System.Drawing.Size(104, 24);
             this.btnYas0.TabIndex = 23;
@@ -353,7 +354,7 @@
             // 
             this.btnYas1.AutoSize = true;
             this.btnYas1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYas1.Location = new System.Drawing.Point(312, 19);
+            this.btnYas1.Location = new System.Drawing.Point(320, 19);
             this.btnYas1.Name = "btnYas1";
             this.btnYas1.Size = new System.Drawing.Size(114, 24);
             this.btnYas1.TabIndex = 24;
@@ -365,7 +366,7 @@
             // 
             this.btnYas2.AutoSize = true;
             this.btnYas2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnYas2.Location = new System.Drawing.Point(453, 21);
+            this.btnYas2.Location = new System.Drawing.Point(477, 19);
             this.btnYas2.Name = "btnYas2";
             this.btnYas2.Size = new System.Drawing.Size(108, 24);
             this.btnYas2.TabIndex = 25;
@@ -377,7 +378,7 @@
             // 
             this.btnSporH.AutoSize = true;
             this.btnSporH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSporH.Location = new System.Drawing.Point(307, 16);
+            this.btnSporH.Location = new System.Drawing.Point(318, 19);
             this.btnSporH.Name = "btnSporH";
             this.btnSporH.Size = new System.Drawing.Size(83, 24);
             this.btnSporH.TabIndex = 26;
@@ -389,7 +390,7 @@
             // 
             this.btnSporE.AutoSize = true;
             this.btnSporE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSporE.Location = new System.Drawing.Point(130, 16);
+            this.btnSporE.Location = new System.Drawing.Point(122, 19);
             this.btnSporE.Name = "btnSporE";
             this.btnSporE.Size = new System.Drawing.Size(73, 24);
             this.btnSporE.TabIndex = 27;
@@ -425,7 +426,7 @@
             // 
             this.grCinsiyet.Controls.Add(this.btnKadin);
             this.grCinsiyet.Controls.Add(this.btnErkek);
-            this.grCinsiyet.Location = new System.Drawing.Point(450, 49);
+            this.grCinsiyet.Location = new System.Drawing.Point(489, 39);
             this.grCinsiyet.Name = "grCinsiyet";
             this.grCinsiyet.Size = new System.Drawing.Size(623, 57);
             this.grCinsiyet.TabIndex = 29;
@@ -435,7 +436,7 @@
             // 
             this.grKilo.Controls.Add(this.btnKiloH);
             this.grKilo.Controls.Add(this.btnKiloE);
-            this.grKilo.Location = new System.Drawing.Point(445, 112);
+            this.grKilo.Location = new System.Drawing.Point(486, 120);
             this.grKilo.Name = "grKilo";
             this.grKilo.Size = new System.Drawing.Size(623, 57);
             this.grKilo.TabIndex = 30;
@@ -446,7 +447,7 @@
             this.grYas.Controls.Add(this.btnYas2);
             this.grYas.Controls.Add(this.btnYas1);
             this.grYas.Controls.Add(this.btnYas0);
-            this.grYas.Location = new System.Drawing.Point(445, 193);
+            this.grYas.Location = new System.Drawing.Point(486, 201);
             this.grYas.Name = "grYas";
             this.grYas.Size = new System.Drawing.Size(623, 57);
             this.grYas.TabIndex = 30;
@@ -456,7 +457,7 @@
             // 
             this.grKalpHst.Controls.Add(this.btnKalpH);
             this.grKalpHst.Controls.Add(this.btnKalpE);
-            this.grKalpHst.Location = new System.Drawing.Point(448, 278);
+            this.grKalpHst.Location = new System.Drawing.Point(489, 286);
             this.grKalpHst.Name = "grKalpHst";
             this.grKalpHst.Size = new System.Drawing.Size(623, 57);
             this.grKalpHst.TabIndex = 30;
@@ -466,7 +467,7 @@
             // 
             this.grTansiyonHst.Controls.Add(this.btnTansiyonE);
             this.grTansiyonHst.Controls.Add(this.btnTansiyonH);
-            this.grTansiyonHst.Location = new System.Drawing.Point(445, 360);
+            this.grTansiyonHst.Location = new System.Drawing.Point(491, 364);
             this.grTansiyonHst.Name = "grTansiyonHst";
             this.grTansiyonHst.Size = new System.Drawing.Size(623, 57);
             this.grTansiyonHst.TabIndex = 30;
@@ -476,7 +477,7 @@
             // 
             this.grSekerHst.Controls.Add(this.btnSekerH);
             this.grSekerHst.Controls.Add(this.btnSekerE);
-            this.grSekerHst.Location = new System.Drawing.Point(445, 432);
+            this.grSekerHst.Location = new System.Drawing.Point(491, 440);
             this.grSekerHst.Name = "grSekerHst";
             this.grSekerHst.Size = new System.Drawing.Size(623, 57);
             this.grSekerHst.TabIndex = 30;
@@ -488,7 +489,7 @@
             this.grStres.Controls.Add(this.btnStresE);
             this.grStres.Location = new System.Drawing.Point(491, 516);
             this.grStres.Name = "grStres";
-            this.grStres.Size = new System.Drawing.Size(580, 57);
+            this.grStres.Size = new System.Drawing.Size(623, 57);
             this.grStres.TabIndex = 30;
             this.grStres.TabStop = false;
             // 
@@ -496,7 +497,7 @@
             // 
             this.grSpor.Controls.Add(this.btnSporE);
             this.grSpor.Controls.Add(this.btnSporH);
-            this.grSpor.Location = new System.Drawing.Point(450, 585);
+            this.grSpor.Location = new System.Drawing.Point(491, 589);
             this.grSpor.Name = "grSpor";
             this.grSpor.Size = new System.Drawing.Size(623, 57);
             this.grSpor.TabIndex = 30;
@@ -506,7 +507,7 @@
             // 
             this.grSigara.Controls.Add(this.btnSigaraE);
             this.grSigara.Controls.Add(this.btnSigaraH);
-            this.grSigara.Location = new System.Drawing.Point(445, 652);
+            this.grSigara.Location = new System.Drawing.Point(491, 652);
             this.grSigara.Name = "grSigara";
             this.grSigara.Size = new System.Drawing.Size(623, 57);
             this.grSigara.TabIndex = 30;
@@ -538,6 +539,7 @@
             this.Controls.Add(this.grStres);
             this.Controls.Add(this.grSpor);
             this.Controls.Add(this.grSigara);
+            this.Location = new System.Drawing.Point(500, 300);
             this.Name = "KALP_HASTALIĞI";
             this.Text = "KALP_HASTALIĞI";
             this.Load += new System.EventHandler(this.KALP_HASTALIĞI_Load);

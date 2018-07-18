@@ -23,29 +23,32 @@ namespace stajokuluproje
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void soyadChanged(object sender, EventArgs e)
-        {
-           // this.soyad = (String)sender;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
+      
 
         private void Kaydet_button(object sender, EventArgs e)
         {
-           nextPage.Show();
-            this.Hide();
 
+            if (!string.IsNullOrEmpty(adtext.Text) || !string.IsNullOrEmpty(adtext.Text) || !string.IsNullOrEmpty(numberText.Text))
+            {
+                                                        //Database eklenilecek
+                goNext();
+            }
 
+            
         }
 
+        /*private void funct(object sender , EventArgs e)
+        {
+            MessageBox.Show("EMINE");
+
+
+        }*/
+        private void goNext()
+        {
+            nextPage.Show();
+            this.Hide();
+        }
         private void adChanged(object sender, EventArgs e)
         {
             //this.ad = (String) sender;

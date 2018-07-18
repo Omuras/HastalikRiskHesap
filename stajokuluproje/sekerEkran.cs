@@ -24,12 +24,6 @@ namespace stajokuluproje
             
         }
 
-
-       /* private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-*/
         private void hesapla(object sender, EventArgs e)
         {
             
@@ -39,6 +33,8 @@ namespace stajokuluproje
             parent.Show();
             this.Hide();
         }
+
+ 
     }
 }
 

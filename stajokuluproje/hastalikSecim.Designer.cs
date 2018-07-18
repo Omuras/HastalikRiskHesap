@@ -88,6 +88,7 @@
             // 
             // HASTALIK_SECİMİ
             // 
+            this.Location = new System.Drawing.Point(500, 300);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;

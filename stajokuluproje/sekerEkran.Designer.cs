@@ -32,25 +32,18 @@
             this.aclık_skr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tok_skr = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.hesapla_seker_btn = new System.Windows.Forms.Button();
             this.btnGeri = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 132);
+            this.label1.Location = new System.Drawing.Point(174, 240);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 20);
@@ -60,7 +53,7 @@
             // aclık_skr
             // 
             this.aclık_skr.BackColor = System.Drawing.Color.OldLace;
-            this.aclık_skr.Location = new System.Drawing.Point(725, 129);
+            this.aclık_skr.Location = new System.Drawing.Point(725, 237);
             this.aclık_skr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.aclık_skr.Name = "aclık_skr";
             this.aclık_skr.Size = new System.Drawing.Size(164, 26);
@@ -70,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 233);
+            this.label2.Location = new System.Drawing.Point(174, 341);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(299, 20);
@@ -80,43 +73,11 @@
             // tok_skr
             // 
             this.tok_skr.BackColor = System.Drawing.Color.OldLace;
-            this.tok_skr.Location = new System.Drawing.Point(725, 233);
+            this.tok_skr.Location = new System.Drawing.Point(725, 341);
             this.tok_skr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tok_skr.Name = "tok_skr";
             this.tok_skr.Size = new System.Drawing.Size(164, 26);
             this.tok_skr.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(174, 361);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Gizli Şekeriniz Var Mı?";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(134, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 24);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "EVET";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(308, 23);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(83, 24);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "HAYIR";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -126,28 +87,6 @@
             this.label4.Size = new System.Drawing.Size(275, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ailenizde Şeker Hastalığı Var Mı?";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(134, 25);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(73, 24);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "EVET";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(308, 21);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(83, 24);
-            this.radioButton4.TabIndex = 9;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "HAYIR";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // hesapla_seker_btn
             // 
@@ -171,25 +110,27 @@
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.geriDon);
             // 
-            // groupBox1
+            // radioButton4
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(591, 336);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(620, 70);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(880, 461);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(83, 24);
+            this.radioButton4.TabIndex = 9;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "HAYIR";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // radioButton3
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Location = new System.Drawing.Point(591, 442);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(620, 70);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(725, 463);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(73, 24);
+            this.radioButton3.TabIndex = 8;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "EVET";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // SEKER_HASTALIGI
             // 
@@ -200,21 +141,17 @@
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.hesapla_seker_btn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.tok_skr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aclık_skr);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Location = new System.Drawing.Point(500, 300);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SEKER_HASTALIGI";
             this.Text = "Seker hastaligi";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,15 +163,10 @@
         private System.Windows.Forms.TextBox aclık_skr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tok_skr;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Button hesapla_seker_btn;
         private System.Windows.Forms.Button btnGeri;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

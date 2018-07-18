@@ -13,6 +13,8 @@ namespace stajokuluproje
     public partial class KALP_HASTALIĞI : Form
     {
         public HASTALIK_SECİMİ parent;
+        private int goodModifier ;
+        private int badModifier;
 
         public KALP_HASTALIĞI()
         {
@@ -25,18 +27,23 @@ namespace stajokuluproje
         }
         private void hesaplaFunc(object sender, EventArgs e)                //Gerekli ayarlar yapıldı sorgu yazılması lazım
         {
-            if (btnErkek.Checked)
-            {
-                System.Windows.Forms.MessageBox.Show("It's a boy");
-            }
-
-
+            hesap();
         }
 
         private void geriDon(object sender, EventArgs e)    //Geri dön fonksiyonu
         {
             parent.Show();
             this.Hide();
+        }
+
+        private void hesap() {
+                                            //badThing goodThing 2 degisken  tanımlanır. kötü değişkenlere evet denildiğinde badThing artırılır.terside geçerli düşürülmez hiç.
+
+        }
+
+        private void btnKadin_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
