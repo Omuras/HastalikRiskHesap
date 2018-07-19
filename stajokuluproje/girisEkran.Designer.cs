@@ -98,11 +98,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(366, 400);
+            this.label4.Location = new System.Drawing.Point(315, 380);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.Size = new System.Drawing.Size(248, 40);
             this.label4.TabIndex = 6;
-            this.label4.Text = "TELEFON NUMARASI : ";
+            this.label4.Text = "TELEFON NUMARANIZIN\r\n         SON 6 HANESİ            : ";
             // 
             // numberText
             // 
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.numberText);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

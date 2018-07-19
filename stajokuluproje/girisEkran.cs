@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace stajokuluproje
 {
@@ -15,7 +16,7 @@ namespace stajokuluproje
 
         private String ad = null;
         private String soyad = null;
-        HASTALIK_SECİMİ nextPage = new HASTALIK_SECİMİ();
+        private int kullaniciNo = 0;
 
 
         public girisEkran()
@@ -31,11 +32,29 @@ namespace stajokuluproje
 
             if (!string.IsNullOrEmpty(adtext.Text) || !string.IsNullOrEmpty(adtext.Text) || !string.IsNullOrEmpty(numberText.Text))
             {
-                                                        //Database eklenilecek
-                goNext();
+                ad = adtext.Text;
+                soyad = soyadtext.Text;
+                kullaniciNo = int.Parse(numberText.Text); //Değişkene textboxtaki veriler kaydedildi
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Merve\\Desktop\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
+                conn.Open(); //veriytabanı bağlantısı açıldı
+                String Sorgu = "INSERT INTO Kullanici(KullaniciNo,Ad,Soyad)VALUES('" + kullaniciNo + "','" + ad + "','" + soyad + "')"; //Veritabanına ekleme yapılıyor
+                try
+                {
+                    //Hata yok ise sorgu çalıştırılacak komutu
+                    OleDbCommand cmd = new OleDbCommand(Sorgu, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Giriş Başarılı");
+                    HASTALIK_SECİMİ nextPage = new HASTALIK_SECİMİ(kullaniciNo);
+                    nextPage.Show();
+                    this.Hide();//Giriş başarılı ise diğer sayfaya girebilsin
+                }
+                catch (Exception ex)
+                {
+                    //kayıt eklenemediğinde verilen hata
+                    MessageBox.Show(ex.Message);
+                }
+                conn.Close();
             }
-
-            
         }
 
         /*private void funct(object sender , EventArgs e)
@@ -44,11 +63,11 @@ namespace stajokuluproje
 
 
         }*/
-        private void goNext()
+        /*private void goNext()
         {
             nextPage.Show();
             this.Hide();
-        }
+        }*/
         private void adChanged(object sender, EventArgs e)
         {
             //this.ad = (String) sender;

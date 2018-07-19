@@ -37,6 +37,8 @@
             this.btnGeri = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.ailedeSeker = new System.Windows.Forms.GroupBox();
+            this.ailedeSeker.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -113,7 +115,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(880, 461);
+            this.radioButton4.Location = new System.Drawing.Point(222, 25);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(83, 24);
             this.radioButton4.TabIndex = 9;
@@ -124,7 +126,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(725, 463);
+            this.radioButton3.Location = new System.Drawing.Point(56, 25);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(73, 24);
             this.radioButton3.TabIndex = 8;
@@ -132,26 +134,37 @@
             this.radioButton3.Text = "EVET";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // ailedeSeker
+            // 
+            this.ailedeSeker.Controls.Add(this.radioButton3);
+            this.ailedeSeker.Controls.Add(this.radioButton4);
+            this.ailedeSeker.Location = new System.Drawing.Point(636, 441);
+            this.ailedeSeker.Name = "ailedeSeker";
+            this.ailedeSeker.Size = new System.Drawing.Size(384, 62);
+            this.ailedeSeker.TabIndex = 12;
+            this.ailedeSeker.TabStop = false;
+            // 
             // SEKER_HASTALIGI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.ailedeSeker);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.hesapla_seker_btn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tok_skr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aclık_skr);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Location = new System.Drawing.Point(500, 300);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SEKER_HASTALIGI";
             this.Text = "Seker hastaligi";
+            this.ailedeSeker.ResumeLayout(false);
+            this.ailedeSeker.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +181,6 @@
         private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.GroupBox ailedeSeker;
     }
 }

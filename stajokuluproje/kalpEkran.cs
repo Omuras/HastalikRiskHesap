@@ -15,9 +15,11 @@ namespace stajokuluproje
         public HASTALIK_SECİMİ parent;
         private int goodModifier ;
         private int badModifier;
+        private int kullaniciNo = 0;
 
-        public KALP_HASTALIĞI()
+        public KALP_HASTALIĞI(int kullaniciNo)
         {
+            this.kullaniciNo = kullaniciNo;
             InitializeComponent();
         }
 
@@ -42,6 +44,11 @@ namespace stajokuluproje
         }
 
         private void btnKadin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grKalpHst_Enter(object sender, EventArgs e)
         {
 
         }
