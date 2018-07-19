@@ -35,7 +35,7 @@ namespace stajokuluproje
                 ad = adtext.Text;
                 soyad = soyadtext.Text;
                 kullaniciNo = int.Parse(numberText.Text); //Değişkene textboxtaki veriler kaydedildi
-                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Merve\\Desktop\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
+                OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Omura\\source\\repos\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
                 conn.Open(); //veriytabanı bağlantısı açıldı
                 String Sorgu = "INSERT INTO Kullanici(KullaniciNo,Ad,Soyad)VALUES('" + kullaniciNo + "','" + ad + "','" + soyad + "')"; //Veritabanına ekleme yapılıyor
                 try

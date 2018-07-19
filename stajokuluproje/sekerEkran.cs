@@ -20,7 +20,7 @@ namespace stajokuluproje
         private int kullaniciNo = 0;
         private double aclikKanSekeri = 0;
         private double toklukKanSekeri = 0;
-        private String AiledeSekerDurumu;
+        private Boolean AiledeSekerDurumu;
         public SEKER_HASTALIGI(int kullaniciNo)
         {
             this.kullaniciNo = kullaniciNo;
@@ -33,14 +33,14 @@ namespace stajokuluproje
             aclikKanSekeri = double.Parse(aclık_skr.Text);
             toklukKanSekeri = double.Parse(tok_skr.Text);
             if (radioButton3.Checked)
-                AiledeSekerDurumu = "EVET";
+                AiledeSekerDurumu = true;
             else if (radioButton4.Checked)
-                AiledeSekerDurumu = "HAYIR";
+                AiledeSekerDurumu = false;
             VeritabaninaEkle();
         }
         private void VeritabaninaEkle()
         {
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Merve\\Desktop\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Omura\\source\repos\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
             conn.Open(); //veriytabanı bağlantısı açıldı
             String Sorgu = "INSERT INTO " +
                 "SekerHastaligi(KullaniciNo,AclikKanSekeri,ToklukKanSekeri,AiledeVarmi,Tarih)" +
