@@ -36,11 +36,55 @@ namespace stajokuluproje
                 AiledeSekerDurumu = true;
             else if (radioButton4.Checked)
                 AiledeSekerDurumu = false;
+
+
+            if(aclikKanSekeri <= 90)
+            {
+                MessageBox.Show(text: "Sekeriniz yoktur!", caption: " Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+            }else if (aclikKanSekeri <= 126)
+            {
+                MessageBox.Show(text: "Gizli Sekeriniz vardir!", caption: " Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
+            }else if (aclikKanSekeri > 126)
+            {
+                MessageBox.Show(text: "Seker hastaliginiz vardir!", caption: " Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show(text: "Gecerli bir aclik kan degeri giriniz!", caption: " Uyarı !",
+                                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+            }
+
+            if (toklukKanSekeri <= 100)
+            {
+                MessageBox.Show(text: "Diyabet hastaliginiz yoktur!", caption: " Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+            }
+            else if (toklukKanSekeri > 100)
+            {
+                MessageBox.Show(text: "Diyabet hastaliginiz vardir!", caption: " Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show(text: "Gecerli bir tokluk kan degeri giriniz!", caption: " Uyarı !",
+                                     buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+            }
+
             VeritabaninaEkle();
+        }
+
+        private void linkOpen(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process.Start("https://www.hastanerandevu.gov.tr/Randevu/login.xhtml;jsessionid=v6yke6zIFGwNkJ00UzZWZaV5");
+
         }
         private void VeritabaninaEkle()
         {
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Omura\\source\repos\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Omura\\source\\repos\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
             conn.Open(); //veriytabanı bağlantısı açıldı
             String Sorgu = "INSERT INTO " +
                 "SekerHastaligi(KullaniciNo,AclikKanSekeri,ToklukKanSekeri,AiledeVarmi,Tarih)" +
@@ -51,7 +95,7 @@ namespace stajokuluproje
                 //Hata yok ise sorgu çalıştırılacak komutu
                 OleDbCommand cmd = new OleDbCommand(Sorgu, conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Bilgileriniz kaydedildi!");
+              //  MessageBox.Show("Bilgileriniz kaydedildi!");
             }
             catch (Exception ex)
             {

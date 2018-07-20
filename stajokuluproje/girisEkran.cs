@@ -43,7 +43,7 @@ namespace stajokuluproje
                     //Hata yok ise sorgu çalıştırılacak komutu
                     OleDbCommand cmd = new OleDbCommand(Sorgu, conn);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Giriş Başarılı");
+                    //MessageBox.Show("Giriş Başarılı");
                     HASTALIK_SECİMİ nextPage = new HASTALIK_SECİMİ(kullaniciNo);
                     nextPage.Show();
                     this.Hide();//Giriş başarılı ise diğer sayfaya girebilsin

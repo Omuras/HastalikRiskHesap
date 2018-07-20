@@ -37,18 +37,18 @@ namespace stajokuluproje
                 cinsiyet = true;
                 cinsiyetDeger = "Erkek";
             }
-            else if(radioButton1.Checked)
+            else if(radiolinkButton.Checked)
             {
                 cinsiyetDeger = "Kadın";
             }
-            if (!string.IsNullOrEmpty(boytext.Text) || !string.IsNullOrEmpty(boytext.Text) || (!radioButton1.Checked && !radioButton2.Checked))     //Alanlaril dolu olup olmadigini sorguluyoruz
+            if (!string.IsNullOrEmpty(boytext.Text) || !string.IsNullOrEmpty(boytext.Text) || (!radiolinkButton.Checked && !radioButton2.Checked))     //Alanlaril dolu olup olmadigini sorguluyoruz
             {
                 boyDeger = int.Parse(boytext.Text);
                 kiloDeger = int.Parse(kilotext.Text);           //Eger alanlar bos değilse girilen degerleri değiskenlere atıyoruz
 
                 if (boyDeger < 140)
                 {
-                    MessageBox.Show("Lütfen geçerli bir boy bilgisi giriniz");      // Boy degerinin geçerliliği kontrol ediliyor
+                    MessageBox.Show(text: "Lütfen geçerli bir boy değeri giriniz!", caption: "Uyarı !", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);      // Boy degerinin geçerliliği kontrol ediliyor
                     notNull = false;
                     boytext.ResetText();
                 }
@@ -61,7 +61,7 @@ namespace stajokuluproje
             }
             else
             {
-                MessageBox.Show("Lütfen bütün alanlari doldurunuz! ");              //Eger alanlar bos ise hata yazdirip isleme devam etmiyoruz
+                MessageBox.Show(text: "Lütfen bütün alanlari doldurunuz!", caption: "Uyarı !", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);             //Eger alanlar bos ise hata yazdirip isleme devam etmiyoruz
                 notNull = false;
 
             }
@@ -89,26 +89,35 @@ namespace stajokuluproje
             }
 
         }
+        private void linkOpen(object sender, EventArgs e)
+        {
 
+            System.Diagnostics.Process.Start("https://www.hastanerandevu.gov.tr/Randevu/login.xhtml;jsessionid=v6yke6zIFGwNkJ00UzZWZaV5");
+
+        }
         private void ekranaYaz(double sonuc,double idealKilo)                //Ekrana yazdirma fonksiyonu
         {
             int ik = (int) idealKilo;
             if (sonuc < 18.5) {
-                MessageBox.Show("Kütle endeksiniz : " + sonuc.ToString("0.##") + " Belki Ölü olabilirsiniz! İdeal kilonuz = " + ik.ToString("0.##"));
-               
+                MessageBox.Show(text: "Kütle endeksiniz : " + sonuc.ToString("0.##") + " Kütle endeksiniz normalden düşük! İdeal kilonuz = " + ik.ToString("0.##"), caption: "Uyarı !", 
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
             }
             else if (sonuc < 25)
-                MessageBox.Show("Kütle endeksiniz : " + sonuc.ToString("0.##") + " Sende fakirsin dimi la! İdeal kilonuz = " + ik.ToString("0.##"));
+            MessageBox.Show(text: "Kütle endeksiniz : " + sonuc.ToString("0.##") + " Kütle endeksiniz normal! İdeal kilonuz = " + ik.ToString("0.##"), caption: "Uyarı !",
+                                   buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+
             else if (sonuc < 30)
-                MessageBox.Show("Kütle endeksiniz : " + sonuc.ToString("0.##") + " Şişkoya bak! İdeal kilonuz = " + ik.ToString("0.##"));
+                MessageBox.Show(text: "Kütle endeksiniz : " + sonuc.ToString("0.##") + " Kütle endeksiniz normalden yüksek! İdeal kilonuz = " + ik.ToString("0.##"), caption: "Uyarı !",
+                                    buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
             else
-                MessageBox.Show("Kütle endeksiniz : " + sonuc.ToString("0.##") + " Yeter artık yeter yeme ! İdeal kilonuz = " + ik.ToString("0.##"));
+                MessageBox.Show(text: "Kütle endeksiniz : " + sonuc.ToString("0.##") + " Kütle endeksiniz normalden çok yüksek.Obezite sınıfına giriyorsunuz! İdeal kilonuz = " + ik.ToString("0.##"), caption: "Uyarı !",
+                                   buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Warning);
             kilotext.ResetText();               //textboxların içerigini sıfırlıyor yani boşaltıyor
             boytext.ResetText();
         }
         private void VeritabaninaEkle(double boy, double kilo, String cinsiyet)
         {
-            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Merve\\Desktop\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
+            OleDbConnection conn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Omura\\source\\repos\\stajokuluproje\\stajokuluproje\\StajOkuluDatabase.mdb"); //Veritabanı çekiliyor
             conn.Open(); //veriytabanı bağlantısı açıldı
             String Sorgu = "INSERT INTO ObeziteTablosu(KullaniciNo,Boy,Kilo,Cinsiyet,Tarih)VALUES('" + kullaniciNo + "','" + int.Parse(boy.ToString()) + "','" + int.Parse(kilo.ToString()) + "','" + cinsiyet + "','" + DateTime.Now.ToLongDateString() +"')"; //Veritabanına ekleme yapılıyor
             try
@@ -116,7 +125,7 @@ namespace stajokuluproje
                 //Hata yok ise sorgu çalıştırılacak komutu
                 OleDbCommand cmd = new OleDbCommand(Sorgu, conn);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Bilgileeiniz kaydedildi!");
+               // MessageBox.Show("Bilgileeiniz kaydedildi!");
             }
             catch (Exception ex)
             {

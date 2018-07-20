@@ -102,7 +102,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(248, 40);
             this.label4.TabIndex = 6;
-            this.label4.Text = "TELEFON NUMARANIZIN\r\n         SON 6 HANESİ            : ";
+            this.label4.Text = "TELEFON NUMARANIZIN\r\n         SON 7 HANESİ            : ";
             // 
             // numberText
             // 

@@ -33,10 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.boytext = new System.Windows.Forms.TextBox();
             this.kilotext = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radiolinkButton = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.obezite_buton = new System.Windows.Forms.Button();
             this.btnGeri = new System.Windows.Forms.Button();
+            this.linkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,17 +87,17 @@
             this.kilotext.Size = new System.Drawing.Size(164, 20);
             this.kilotext.TabIndex = 4;
             // 
-            // radioButton1
+            // radiolinkButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(619, 413);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 24);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "KADIN";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radiolinkButton.AutoSize = true;
+            this.radiolinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiolinkButton.Location = new System.Drawing.Point(619, 413);
+            this.radiolinkButton.Name = "radiolinkButton";
+            this.radiolinkButton.Size = new System.Drawing.Size(81, 24);
+            this.radiolinkButton.TabIndex = 5;
+            this.radiolinkButton.TabStop = true;
+            this.radiolinkButton.Text = "KADIN";
+            this.radiolinkButton.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -135,16 +136,29 @@
             this.btnGeri.UseVisualStyleBackColor = false;
             this.btnGeri.Click += new System.EventHandler(this.geriDon);
             // 
+            // linkButton
+            // 
+            this.linkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.linkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkButton.Location = new System.Drawing.Point(208, 548);
+            this.linkButton.Name = "linkButton";
+            this.linkButton.Size = new System.Drawing.Size(311, 45);
+            this.linkButton.TabIndex = 32;
+            this.linkButton.Text = "Online randevu platformu";
+            this.linkButton.UseVisualStyleBackColor = false;
+            this.linkButton.Click += new System.EventHandler(this.linkOpen);
+            // 
             // OBEZİTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1426, 802);
+            this.Controls.Add(this.linkButton);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.obezite_buton);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radiolinkButton);
             this.Controls.Add(this.kilotext);
             this.Controls.Add(this.boytext);
             this.Controls.Add(this.label3);
@@ -156,7 +170,6 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            
         }
 
         #endregion
@@ -166,9 +179,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox boytext;
         private System.Windows.Forms.TextBox kilotext;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radiolinkButton;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button obezite_buton;
         private System.Windows.Forms.Button btnGeri;
+        private System.Windows.Forms.Button linkButton;
     }
 }

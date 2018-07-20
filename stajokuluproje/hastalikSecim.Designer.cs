@@ -32,7 +32,6 @@
             this.sekeregirisbutton = new System.Windows.Forms.Button();
             this.obezitegirisbutton = new System.Windows.Forms.Button();
             this.kalpgirisbutton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -82,22 +81,12 @@
             this.kalpgirisbutton.UseVisualStyleBackColor = false;
             this.kalpgirisbutton.Click += new System.EventHandler(this.kalpGiris);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
-            // 
             // HASTALIK_SECİMİ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.kalpgirisbutton);
             this.Controls.Add(this.obezitegirisbutton);
             this.Controls.Add(this.sekeregirisbutton);
@@ -117,6 +106,5 @@
         private System.Windows.Forms.Button sekeregirisbutton;
         private System.Windows.Forms.Button obezitegirisbutton;
         private System.Windows.Forms.Button kalpgirisbutton;
-        private System.Windows.Forms.Label label2;
     }
 }

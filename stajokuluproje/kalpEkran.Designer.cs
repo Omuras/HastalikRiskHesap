@@ -67,6 +67,7 @@
             this.grStres = new System.Windows.Forms.GroupBox();
             this.grSpor = new System.Windows.Forms.GroupBox();
             this.grSigara = new System.Windows.Forms.GroupBox();
+            this.linkButton = new System.Windows.Forms.Button();
             this.grCinsiyet.SuspendLayout();
             this.grKilo.SuspendLayout();
             this.grYas.SuspendLayout();
@@ -180,7 +181,6 @@
             this.btnKadin.TabStop = true;
             this.btnKadin.Text = "KADIN";
             this.btnKadin.UseVisualStyleBackColor = true;
-            this.btnKadin.CheckedChanged += new System.EventHandler(this.btnKadin_CheckedChanged);
             // 
             // btnErkek
             // 
@@ -462,7 +462,6 @@
             this.grKalpHst.Size = new System.Drawing.Size(623, 57);
             this.grKalpHst.TabIndex = 30;
             this.grKalpHst.TabStop = false;
-            this.grKalpHst.Enter += new System.EventHandler(this.grKalpHst_Enter);
             // 
             // grTansiyonHst
             // 
@@ -514,12 +513,25 @@
             this.grSigara.TabIndex = 30;
             this.grSigara.TabStop = false;
             // 
+            // linkButton
+            // 
+            this.linkButton.BackColor = System.Drawing.Color.PapayaWhip;
+            this.linkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkButton.Location = new System.Drawing.Point(64, 671);
+            this.linkButton.Name = "linkButton";
+            this.linkButton.Size = new System.Drawing.Size(311, 45);
+            this.linkButton.TabIndex = 31;
+            this.linkButton.Text = "Online randevu platformu";
+            this.linkButton.UseVisualStyleBackColor = false;
+            this.linkButton.Click += new System.EventHandler(this.linkOpen);
+            // 
             // KALP_HASTALIĞI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.linkButton);
             this.Controls.Add(this.geriButton);
             this.Controls.Add(this.kalpbutton);
             this.Controls.Add(this.label9);
@@ -608,5 +620,6 @@
         private System.Windows.Forms.GroupBox grStres;
         private System.Windows.Forms.GroupBox grSpor;
         private System.Windows.Forms.GroupBox grSigara;
+        private System.Windows.Forms.Button linkButton;
     }
 }

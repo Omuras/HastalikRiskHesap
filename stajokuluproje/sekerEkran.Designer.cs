@@ -38,6 +38,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.ailedeSeker = new System.Windows.Forms.GroupBox();
+            this.linkButton = new System.Windows.Forms.Button();
             this.ailedeSeker.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,12 +145,26 @@
             this.ailedeSeker.TabIndex = 12;
             this.ailedeSeker.TabStop = false;
             // 
+            // linkButton
+            // 
+            this.linkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+
+            this.linkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkButton.Location = new System.Drawing.Point(148, 590);
+            this.linkButton.Name = "linkButton";
+            this.linkButton.Size = new System.Drawing.Size(311, 45);
+            this.linkButton.TabIndex = 32;
+            this.linkButton.Text = "Online randevu platformu";
+            this.linkButton.UseVisualStyleBackColor = false;
+            this.linkButton.Click += new System.EventHandler(this.linkOpen);
+            // 
             // SEKER_HASTALIGI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.linkButton);
             this.Controls.Add(this.ailedeSeker);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.hesapla_seker_btn);
@@ -182,5 +197,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.GroupBox ailedeSeker;
+        private System.Windows.Forms.Button linkButton;
     }
 }
