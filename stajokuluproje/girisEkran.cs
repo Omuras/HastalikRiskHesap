@@ -43,7 +43,8 @@ namespace stajokuluproje
                     //Hata yok ise sorgu çalıştırılacak komutu
                     OleDbCommand cmd = new OleDbCommand(Sorgu, conn);
                     cmd.ExecuteNonQuery();
-                    //MessageBox.Show("Giriş Başarılı");
+                    MessageBox.Show(text: "Giriş başarılı!", caption: "Durum!", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Asterisk);
+
                     HASTALIK_SECİMİ nextPage = new HASTALIK_SECİMİ(kullaniciNo);
                     nextPage.Show();
                     this.Hide();//Giriş başarılı ise diğer sayfaya girebilsin
@@ -51,7 +52,8 @@ namespace stajokuluproje
                 catch (Exception ex)
                 {
                     //kayıt eklenemediğinde verilen hata
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(text: "Giriş Başarısız!", caption: "Durum!", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+
                 }
                 conn.Close();
             }
